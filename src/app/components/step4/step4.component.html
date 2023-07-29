@@ -1,0 +1,43 @@
+<div class="container">
+
+  <h1>Finishing Up</h1>
+
+  <span>Hello, {{formData.value.name}}, Double-Check everything looks ok before confirming</span>
+
+  <div class="plans">
+    <span>Your plan is: {{formData.value.selectedOption}}</span>
+    <button (click)="change()">change</button>
+  </div>
+
+  <div class="addOns">
+    <ul>
+      <li *ngIf="formData.value.Option1">
+        <span>{{formData.value.Option1}}</span>
+        <button (click)="cancel1()">Remove</button>
+      </li>
+      <li *ngIf="formData.value.Option2">
+        <span>{{formData.value.Option2}}</span>
+        <button (click)="cancel2()">Remove</button>
+      </li>
+      <li *ngIf="formData.value.Option3">
+        <span>{{formData.value.Option3}}</span>
+        <button (click)="cancel3()">Remove</button>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

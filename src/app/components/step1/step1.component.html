@@ -1,0 +1,15 @@
+<form [formGroup]="formData" (ngSubmit)="next()">
+
+  <label for="name">Name:</label>
+  <input type="text" formControlName="name" placeholder="Name...">
+
+  <label for="email">Email:</label>
+  <input type="text" formControlName="email" placeholder="email@email.com...">
+
+  <label for="phone">Phone:</label>
+  <input type="number" formControlName="phone" placeholder="55+...">
+
+  <button type="submit" [disabled]="formData.invalid">Next</button>
+
+</form>
+

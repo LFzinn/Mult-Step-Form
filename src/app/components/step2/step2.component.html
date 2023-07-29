@@ -1,0 +1,20 @@
+<form [formGroup]="formData" (ngSubmit)="next()" >
+
+  <label>
+    <input type="radio" formControlName="selectedOption" value="Arcade">
+    Arcade
+  </label>
+
+  <label>
+    <input type="radio" formControlName="selectedOption" value="Advanced">
+    Advanced
+  </label>
+
+  <label>
+    <input type="radio" formControlName="selectedOption" value="Pro">
+    Pro
+  </label>
+
+  <button type="submit" [disabled]="formData.invalid" >Next</button>
+
+</form>

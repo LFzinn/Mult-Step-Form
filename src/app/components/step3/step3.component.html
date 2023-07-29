@@ -1,0 +1,21 @@
+<form [formGroup]="formData" (ngSubmit)="next()" >
+  <label>
+    <input type="checkbox" formControlName="Option1" value="Online Service">
+    Online Service
+  </label>
+
+  <label>
+    <input type="checkbox" formControlName="Option2" value="Larger Storage">
+    Larger Storage
+  </label>
+
+  <label>
+    <input type="checkbox" formControlName="Option3" value="Customizable Profile">
+    Customizable Profile
+  </label>
+
+  <button type="submit"> Next </button>
+
+
+
+</form>
