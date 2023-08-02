@@ -1,21 +1,69 @@
-<form [formGroup]="formData" (ngSubmit)="next()" >
-  <label>
-    <input type="checkbox" formControlName="Option1" value="Online Service">
-    Online Service
+<div class="container">
+  <div class="container_txt">
+    <h1>Pick add-ons</h1>
+    <span>Add-ons help enhance your gaming experience.</span>
+  </div>
+
+
+<div class="container_form">
+  <form [formGroup]="formData" (ngSubmit)="next()" >
+
+    <label>
+      <div class="menu_item">
+        <input type="checkbox" formControlName="Option1" value="Online Service">
+        <div class="menu_txt">
+          <span>Online Service<br></span>
+          <span>Access to multiplayer games</span>
+        </div>
+        <span>+${{prices.addOn1}}
+          /<b *ngIf="this.prices.isMonthly">mo</b>
+          <b *ngIf="!this.prices.isMonthly">yr</b>
+        </span>
+
+      </div>
+    </label>
+
+
+    <label>
+      <div class="menu_item">
+        <input type="checkbox" formControlName="Option2" value="Larger Storage">
+        <div class="menu_txt">
+          <span>Larger Storage<br></span>
+          <span>Extra 1TB of cloud save</span>
+        </div>
+
+        <span>+${{prices.addOn2}}
+          /<b *ngIf="this.prices.isMonthly">mo</b>
+          <b *ngIf="!this.prices.isMonthly">yr</b>
+        </span>
+      </div>
+    </label>
+
+    <label>
+    <div class="menu_item">
+      <input type="checkbox" formControlName="Option3" value="Customizable Profile">
+      <div class="menu_txt">
+        <span>Customizable Profile<br></span>
+          <span>Custom theme on your profile</span>
+      </div>
+          <span>+${{prices.addOn3}}
+            /<b *ngIf="this.prices.isMonthly">mo</b>
+            <b *ngIf="!this.prices.isMonthly">yr</b>
+          </span>
+    </div>
   </label>
 
-  <label>
-    <input type="checkbox" formControlName="Option2" value="Larger Storage">
-    Larger Storage
-  </label>
-
-  <label>
-    <input type="checkbox" formControlName="Option3" value="Customizable Profile">
-    Customizable Profile
-  </label>
-
-  <button type="submit"> Next </button>
+    <div class="btn_container">
+      <button class="back_btn" (click)="back()" >Go Back</button>
+      <button class="btn" type="submit" [disabled]="formData.invalid" >Next</button>
+    </div>
 
 
 
-</form>
+
+  </form>
+</div>
+
+
+</div>
+

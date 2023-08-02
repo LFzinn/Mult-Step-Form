@@ -1,0 +1,67 @@
+.container_form form {
+  gap: 1.5rem;
+}
+
+
+label {
+  display: flex;
+}
+
+.menu_item{
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  width: 55rem;
+  height: 8rem;
+  background-color: var(--magnolia);
+  border: 2px solid var(--cool-gray);
+  border-radius: 1rem;
+}
+
+
+.menu_txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 2rem;
+}
+
+.menu_txt > span:nth-child(1)  {
+  font-weight: 700;
+  color: var(--marine-blue);
+}
+
+.menu_txt > span:nth-child(2) {
+  color: var(--cool-gray);
+}
+
+
+.menu_item > span:nth-child(3) {
+  position: absolute;
+  right: 10rem;
+  color: var(--purplish-blue);
+  font-size: 1.4rem;
+}
+
+
+.menu_item input[type="checkbox"] {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 0.5rem;
+}
+
+.menu_item:has(:checked){
+  border: 2px solid var(--purplish-blue);
+}
+
+
+.menu_item:not(:has(input[type="checkbox"]:checked)){
+  opacity: 0.6;
+
+}
+
+
+/*
+.menu_item:not(:has(:checked)), .menu_txt:not(:has(:checked)){
+} */

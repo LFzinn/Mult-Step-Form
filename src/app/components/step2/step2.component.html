@@ -1,20 +1,82 @@
-<form [formGroup]="formData" (ngSubmit)="next()" >
+<div class="container">
 
-  <label>
-    <input type="radio" formControlName="selectedOption" value="Arcade">
-    Arcade
-  </label>
+  <div class="container_txt">
+    <h1>Select your plan</h1>
+    <span>You have the option of monthly or yeraly billing.</span>
+  </div>
 
-  <label>
-    <input type="radio" formControlName="selectedOption" value="Advanced">
-    Advanced
-  </label>
+  <div class="container_form">
+    <form [formGroup]="formData" (ngSubmit)="next()" >
 
-  <label>
-    <input type="radio" formControlName="selectedOption" value="Pro">
-    Pro
-  </label>
+      <div class="form_group">
+          <label>
+              <div class="form_box">
+              <img src="../../../assets/images/logos/icon-arcade.svg" alt="arcade icon">
+                <div class="input_txt">
+                  <input type="radio" formControlName="selectedOption" value="Arcade">
+                  <span id="plan" >Arcade</span>
+                  <span id="time">${{this.prices.price1}}
+                    /<b *ngIf="this.prices.isMonthly">mo</b>
+                    <b *ngIf="!this.prices.isMonthly">yr</b>
+                  </span>
+                </div>
 
-  <button type="submit" [disabled]="formData.invalid" >Next</button>
+              </div>
+            </label>
+            <label>
+              <div class="form_box">
+              <img src="../../../assets/images/logos/icon-advanced.svg" alt="Advanced icon">
+                <div class="input_txt">
+                  <input type="radio" formControlName="selectedOption" value="Advanced">
+                  <span id="plan" >Advanced</span>
+                  <span id="time">${{this.prices.price2}}
+                    /<b *ngIf="this.prices.isMonthly">mo</b>
+                    <b *ngIf="!this.prices.isMonthly">yr</b>
+                  </span>
+                </div>
 
-</form>
+              </div>
+            </label>
+            <label>
+              <div class="form_box">
+              <img src="../../../assets/images/logos/icon-pro.svg" alt="Pro icon">
+                <div class="input_txt">
+                  <input type="radio" formControlName="selectedOption" value="Pro">
+                  <span id="plan" >Pro</span>
+                  <span id="time">${{this.prices.price3}}
+                  /<b *ngIf="this.prices.isMonthly">mo</b>
+                  <b *ngIf="!this.prices.isMonthly">yr</b>
+                  </span>
+                </div>
+
+              </div>
+            </label>
+      </div>
+
+
+      <div class="price_btn">
+        <span [class.monthly]="this.prices.monthly" > Monthly</span>
+        <div class="changePrice" [class.month]="this.prices.isMonthly" [class.year]="!this.prices.isMonthly" (click)="changePrice()">
+          <div class="ball"></div>
+        </div>
+        <span [class.monthly]="!this.prices.monthly" >Yearly</span>
+
+      </div>
+
+
+
+      <div class="btn_container">
+        <button class="back_btn" (click)="back()" >Go Back</button>
+        <button class="btn" type="submit" [disabled]="formData.invalid" >Next</button>
+      </div>
+
+    </form>
+
+  </div>
+
+
+</div>
+
+
+
+

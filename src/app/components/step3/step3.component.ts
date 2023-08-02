@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class Step3Component implements OnInit{
 
   formData = this.formService.getForm();
+  prices = this.formService.getPrices();
 
   constructor(private formService: FormService, private router: Router) {}
 
@@ -25,6 +26,10 @@ export class Step3Component implements OnInit{
     if(this.formService.getForm().valid){
       this.router.navigate(['/step4'])
     }
+  }
+
+  back(){
+    this.router.navigate(['/step2'])
   }
 
 

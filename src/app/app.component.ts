@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { FormService } from './services/form.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'form';
+
+  formData = this.formService.getForm();
+
+  constructor(private formService : FormService){}
 }

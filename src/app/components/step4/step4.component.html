@@ -1,41 +1,98 @@
 <div class="container">
-
-  <h1>Finishing Up</h1>
-
-  <span>Hello, {{formData.value.name}}, Double-Check everything looks ok before confirming</span>
-
-  <div class="plans">
-    <span>Your plan is: {{formData.value.selectedOption}}</span>
-    <button (click)="change()">change</button>
+  <div class="container_txt">
+    <h1>Finishing up</h1>
+    <span>{{formData.value.name}}, Double-check everything looks OK before confirming.</span>
   </div>
 
-  <div class="addOns">
+  <div class="summary_container">
+
     <ul>
-      <li *ngIf="formData.value.Option1">
-        <span>{{formData.value.Option1}}</span>
-        <button (click)="cancel1()">Remove</button>
+      <li>
+        <div class="summary_item">
+            <div class="price_title">
+              {{formData.value.selectedOption}}
+              <span *ngIf="this.prices.isMonthly && formData.value.selectedOption">(Monthly)</span>
+              <span *ngIf="!this.prices.isMonthly && formData.value.selectedOption">(Yearly)</span>
+            </div>
+            <div class="price_value">
+              <span *ngIf="formData.value.selectedOption == 'Arcade'">{{prices.price1}}</span>
+              <span *ngIf="formData.value.selectedOption == 'Advanced'">{{prices.price2}}</span>
+              <span *ngIf="formData.value.selectedOption == 'Pro'">{{prices.price3}}</span>
+            </div>
+        </div>
+
+          <div class="btn_summaryItem">
+            <button *ngIf="formData.value.selectedOption" (click)="change()">Change</button>
+          </div>
       </li>
-      <li *ngIf="formData.value.Option2">
-        <span>{{formData.value.Option2}}</span>
-        <button (click)="cancel2()">Remove</button>
+
+      <li>
+        <div class="summary_item">
+          <div *ngIf="formData.value.Option1"class="price_title">
+            {{formData.value.Option1}}
+          </div>
+          <div class="price_value">
+            <span *ngIf="formData.value.Option1" >{{prices.addOn1}}</span>
+          </div>
+        </div>
+        <div class="btn_summaryItem">
+          <button *ngIf="formData.value.Option1" (click)="cancel1()">Remove</button>
+        </div>
       </li>
-      <li *ngIf="formData.value.Option3">
-        <span>{{formData.value.Option3}}</span>
-        <button (click)="cancel3()">Remove</button>
+
+
+      <li>
+        <div class="summary_item">
+          <div *ngIf="formData.value.Option2" class="price_title">
+            {{formData.value.Option2}}
+          </div>
+          <div class="price_value">
+            <span *ngIf="formData.value.Option2">{{prices.addOn2}}</span>
+          </div>
+        </div>
+        <div class="btn_summaryItem">
+          <button *ngIf="formData.value.Option2" (click)="cancel2()">Remove</button>
+        </div>
+      </li>
+
+
+      <li>
+        <div class="summary_item">
+          <div *ngIf="formData.value.Option3" class="price_title">
+            {{formData.value.Option3}}
+          </div>
+          <div class="price_value">
+            <span *ngIf="formData.value.Option3" >{{prices.addOn3}}</span>
+          </div>
+        </div>
+        <div class="btn_summaryItem">
+          <button *ngIf="formData.value.Option3" (click)="cancel3()">Remove</button>
+        </div>
       </li>
     </ul>
+
+
+
+
+
+
   </div>
 
+  <div class="totalPrice">
+    <div class="price_txt">
+      <span *ngIf="this.prices.isMonthly">Total (per month)</span>
+      <span *ngIf="!this.prices.isMonthly">Total (per year) </span>
+    </div>
+    <div class="price_value">
+      <span *ngIf="this.prices.isMonthly" ><b>${{all}}/mo</b></span>
+      <span *ngIf="!this.prices.isMonthly"><b>${{all}}/yr</b></span>
+    </div>
+  </div>
 
-
-
-
-
-
-
-
-
-
+  <div class="btn_container">
+    <button class="back_btn" (click)="back()" >Go Back</button>
+    <button class="btn" (click)="confirm()">Confirm</button>
+  </div>
 
 
 

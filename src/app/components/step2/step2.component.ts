@@ -10,13 +10,31 @@ import { Router } from '@angular/router';
 })
 export class Step2Component {
   formData = this.formService.getForm();
+  prices = this.formService.getPrices();
 
   constructor(private formService: FormService, private router: Router) {}
 
   next(){
-    if(this.formService.getForm().valid){
+    if(this.formService.getForm().valid) {
       this.router.navigate(['/step3'])
     }
   }
+
+  back(){
+    this.router.navigate([''])
+  }
+
+
+
+
+ changePrice() {
+  this.formService.togglePrice();
+ }
+
+
+
+
+
+
 
 }

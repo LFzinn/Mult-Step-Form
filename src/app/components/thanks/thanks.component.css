@@ -1,0 +1,21 @@
+
+.container {
+  align-items: center;
+  gap: 4rem;
+  color: var(--marine-blue);
+}
+
+.container h1 {
+  font-size: 5rem;
+}
+
+.container img{
+  width: 12rem;
+  height: 12rem;
+}
+
+.container p {
+  text-align: center;
+  max-width: 70%;
+  color: var(--cool-gray);
+}

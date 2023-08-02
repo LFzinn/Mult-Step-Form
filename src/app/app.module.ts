@@ -9,6 +9,8 @@ import { Step1Component } from './components/step1/step1.component';
 import { Step2Component } from './components/step2/step2.component';
 import { Step3Component } from './components/step3/step3.component';
 import { Step4Component } from './components/step4/step4.component';
+import { AsideMenuComponent } from './components/aside-menu/aside-menu.component';
+import { ThanksComponent } from './components/thanks/thanks.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { Step4Component } from './components/step4/step4.component';
     Step1Component,
     Step2Component,
     Step3Component,
-    Step4Component
+    Step4Component,
+    AsideMenuComponent,
+    ThanksComponent,
   ],
   imports: [
     BrowserModule,
