@@ -1,7 +1,7 @@
 
 
 
-.container_form form label {
+.form_text {
   margin-bottom: 0.6rem;
   color: var(--marine-blue);
   letter-spacing: 1px
@@ -26,6 +26,15 @@
   margin-top: 6rem;
   align-self: flex-end;
   justify-self:flex-end;
+}
+
+.form_text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form_text span {
+  color: var(--cool-gray);
 }
 
 

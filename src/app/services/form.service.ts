@@ -13,7 +13,7 @@ export class FormService {
   constructor(private formBuilder: FormBuilder) {
     this.formData = this.formBuilder.group({
       name:[null, Validators.required],
-      email:[null, Validators.required],
+      email:[null, [Validators.required, Validators.email]],
       phone:[null, Validators.required],
       selectedOption:[null],
       Option1:[''],

@@ -8,15 +8,23 @@
   <div class="container_form">
     <form [formGroup]="formData" (ngSubmit)="next()">
 
-        <label for="name">Name</label>
-          <input id="input_field" type="text" formControlName="name" placeholder="What's your name?">
+        <div class="form_text">
+          <label for="name">Name</label>
+          <span></span>
+        </div>
+        <input id="input_field" type="text" formControlName="name" placeholder="What's your name?">
 
-        <label for="email">Email Address</label>
-          <input id="input_field" type="text" formControlName="email" placeholder="email@email.com">
+        <div class="form_text">
+          <label for="email">Email Address</label>
+          <span *ngIf="formData.get('email')?.touched && formData.get('email')?.invalid">Invalid email</span>
+        </div>
+          <input id="input_field" type="text" formControlName="email" placeholder="What's your email address?">
 
-
-        <label for="phone">Phone Number</label>
-          <input id="input_field" type="number" formControlName="phone" placeholder="e.g + 1 234 567 890">
+          <div class="form_text">
+            <label for="phone">Phone Number</label>
+            <span *ngIf="formData.get('phone')?.touched">This field is required</span>
+          </div>
+          <input id="input_field" type="number" formControlName="phone" placeholder="What's your phone number?">
 
         <div class="btn_container1">
           <button class="btn" type="submit" [disabled]="formData.invalid">Next Step</button>
