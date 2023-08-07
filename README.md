@@ -37,6 +37,8 @@ Em caso de encontrar algum bug ou inconsistência, por favor, entre em contato c
 
 
 ### Deploy
-[Projeto](https://reactiveform.vercel.app/)
+[PROJETO](https://reactiveform.vercel.app/)
+
+### Completo
 ![etapa um](./src/assets/public_assets/complet.gif)
 
