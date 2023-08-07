@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { FormService } from 'src/app/services/form.service';
+import { PricesService } from 'src/app/services/prices.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,50 +9,30 @@ import { Router } from '@angular/router';
   templateUrl: './step4.component.html',
   styleUrls: ['./step4.component.css']
 })
-export class Step4Component {
+export class Step4Component implements OnInit {
+
   formData = this.formService.getForm();
-  prices = this.formService.getPrices();
-
-  constructor(private formService: FormService, private router: Router) {}
-
+  prices = this.pricesService.getPrices();
+  all = this.pricesService.getTotal();
 
 
-  totalPlans() {
-
-    if(this.formData.value.selectedOption == 'Arcade'){
-      return this.prices.price1;
-    }else if (this.formData.value.selectedOption == 'Advanced'){
-      return this.prices.price2;
-    }else if (this.formData.value.selectedOption == 'Pro') {
-      return this.prices.price3
-    }else {
-      return 0
+  constructor(private formService: FormService, private router: Router, private pricesService: PricesService) {
+    if(this.formData.value.Option1 === true) {
+      this.formData.get('Option1')?.setValue('Online Service')
     }
-  }
-
-  totalAddOns() {
-    let total = 0;
-
-    const options = ['Option1', 'Option2', 'Option3'];
-    for (const option of options) {
-      if (this.formData.value[option] === 'Online Service') {
-        total += this.prices.addOn1;
-      } else if (this.formData.value[option] === 'Larger Storage') {
-        total += this.prices.addOn2;
-      } else if (this.formData.value[option] === 'Customizable Profile') {
-        total += this.prices.addOn3;
-      }
+    if(this.formData.value.Option2 === true) {
+      this.formData.get('Option2')?.setValue('Larger Storage')
+    }
+    if(this.formData.value.Option3 === true) {
+      this.formData.get('Option3')?.setValue('Customizable Profile')
     }
 
-    return total;
+
   }
 
 
 
-  selectedAddOn = this.totalAddOns();
-  selectedPlan = this.totalPlans();
-
-  all = this.selectedAddOn+ this.selectedPlan
+  ngOnInit() {}
 
 
   change(){

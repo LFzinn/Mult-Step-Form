@@ -7,10 +7,14 @@ import { FormService } from './services/form.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent{
   title = 'form';
 
   formData = this.formService.getForm();
 
   constructor(private formService : FormService){}
+
+
+
+
 }

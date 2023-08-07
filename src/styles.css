@@ -31,6 +31,7 @@
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.6rem;
   background-color: var(--light-gray);
+  overflow: hidden;
  }
 
 
@@ -108,6 +109,45 @@
   color: var(--cool-gray);
 }
 
+
+
+
+
+@media (max-width: 870px) {
+  .container_aside {
+    height: auto;
+    width: 100%;
+  }
+  .container_txt {
+    text-align: center;
+    margin: 0 0 2rem 0;
+  }
+}
+
+@media (max-width: 410px) {
+  .btn_container {
+    margin-top: 1rem;
+
+  }
+}
+
+
+@media (max-width: 290px) {
+  .btn {
+    width: 7rem;
+    height: 5rem;
+    font-size: 1.6rem;
+  }
+}
+
+
+@media (max-width: 230px) {
+  .btn {
+    width: 5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+  }
+}
 
 
 

@@ -10,7 +10,6 @@
 
         <div class="form_text">
           <label for="name">Name</label>
-          <span></span>
         </div>
         <input id="input_field" type="text" formControlName="name" placeholder="What's your name?">
 
@@ -22,7 +21,7 @@
 
           <div class="form_text">
             <label for="phone">Phone Number</label>
-            <span *ngIf="formData.get('phone')?.touched">This field is required</span>
+            <span *ngIf="formData.get('phone')?.touched && formData.get('phone')?.invalid">This field is required</span>
           </div>
           <input id="input_field" type="number" formControlName="phone" placeholder="What's your phone number?">
 

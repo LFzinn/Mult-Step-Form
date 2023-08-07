@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 
 
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-aside-menu',
@@ -10,7 +9,11 @@ import { Router } from '@angular/router';
 })
 export class AsideMenuComponent {
 
-  constructor(private router : Router){}
+
+  constructor(){}
+
+
+
 
 
 

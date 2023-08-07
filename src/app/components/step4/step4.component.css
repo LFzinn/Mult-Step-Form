@@ -1,3 +1,8 @@
+.container_txt b {
+  color: var(--purplish-blue);
+}
+
+
 .summary_container {
   display: flex;
   align-items: center;
@@ -25,8 +30,13 @@
   justify-content: space-between;
 }
 
-.price_title {
+.plan_title {
+  font-size: 1.9rem;
   color: var(--marine-blue);
+}
+
+.price_title {
+  color: var(--cool-gray);
 }
 
   li:first-of-type::after {
@@ -39,10 +49,15 @@
   background-color: var(--light-gray);
 }
 
+.price_value span {
+  color: var(--marine-blue);
+}
+
 
 .btn_summaryItem button{
   background: transparent;
   margin-bottom: 0.8rem;
+  font-size: 1.2rem;
   border: none;
   cursor: pointer;
   color: var(--cool-gray);
@@ -50,7 +65,7 @@
 }
 
 .btn_summaryItem button:hover {
-  border-bottom: 1px solid var(--light-gray);
+  color: var(--strawberry-red);
 }
 
 .totalPrice {
@@ -65,6 +80,58 @@
 .totalPrice b {
   font-size: 2rem;
   color: var(--purplish-blue);
+}
+
+
+@media (max-width: 870px) {
+
+  .price_title {
+    position: absolute;
+    left: 2rem;
+  }
+  .price_value {
+    position: absolute;
+    right: 2rem;
+  }
+  .btn_summaryItem {
+    margin: 2rem 0;
+
+  }
+}
+
+@media (max-width: 310px) {
+
+  .summary_container ul {
+    align-items: center;
+    justify-content: center;
+  }
+  .summary_item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn_summaryItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+
+  }
+  .price_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    left: 0;
+  }
+  .price_value {
+    position: relative;
+    right: 0;
+  }
+
 }
 
 

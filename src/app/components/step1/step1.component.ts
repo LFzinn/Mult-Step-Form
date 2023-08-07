@@ -15,6 +15,10 @@ export class Step1Component {
   constructor(private formService : FormService, private router : Router){}
 
 
+
+
+
+
   next(){
     if(this.formService.getForm().valid) {
       this.router.navigate(['/step2'])

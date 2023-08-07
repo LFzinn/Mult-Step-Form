@@ -34,11 +34,34 @@
 }
 
 .form_text span {
-  color: var(--cool-gray);
+  color: var(--strawberry-red);
+}
+
+.errorMsg {
+  color: var(--strawberry-red);
 }
 
 
+@media (max-width: 870px) {
+  .container_txt {
+    text-align: center;
+  }
 
+}
+
+@media (max-width: 290px) {
+  .btn_container1 {
+    display: flex;
+    margin-top: 1rem;
+    align-self: center;
+    justify-self:center;
+  }
+  .btn {
+    width: 13rem;
+    font-size: 2rem;
+    height: 6rem;
+  }
+}
 
 
 

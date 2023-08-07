@@ -19,3 +19,38 @@
   max-width: 70%;
   color: var(--cool-gray);
 }
+
+
+.container p b {
+  color: var(--pastel-blue);
+}
+
+@media (max-width: 470px) {
+  .container {
+    gap: 2rem;
+    padding: 2rem 0;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .container img{
+    width: 8rem;
+    height: 8rem;
+  }
+  .container h1 {
+    font-size: 3rem;
+  }
+  .container p {
+    max-width: 100%;
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (max-width: 190px) {
+  .container p {
+    font-size: 1rem;
+  }
+}

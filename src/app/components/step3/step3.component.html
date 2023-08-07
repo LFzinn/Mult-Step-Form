@@ -10,7 +10,7 @@
 
     <label>
       <div class="menu_item">
-        <input type="checkbox" formControlName="Option1" value="Online Service">
+        <input type="checkbox" formControlName="Option1" (change)="updateOption1()">
         <div class="menu_txt">
           <span>Online Service<br></span>
           <span>Access to multiplayer games</span>
@@ -26,7 +26,7 @@
 
     <label>
       <div class="menu_item">
-        <input type="checkbox" formControlName="Option2" value="Larger Storage">
+        <input type="checkbox" formControlName="Option2" (change)="updateOption2()">
         <div class="menu_txt">
           <span>Larger Storage<br></span>
           <span>Extra 1TB of cloud save</span>
@@ -41,7 +41,7 @@
 
     <label>
     <div class="menu_item">
-      <input type="checkbox" formControlName="Option3" value="Customizable Profile">
+      <input type="checkbox" formControlName="Option3" (change)="updateOption3()">
       <div class="menu_txt">
         <span>Customizable Profile<br></span>
           <span>Custom theme on your profile</span>

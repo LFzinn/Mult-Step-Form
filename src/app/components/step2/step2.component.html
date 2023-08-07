@@ -55,11 +55,11 @@
 
 
       <div class="price_btn">
-        <span [class.monthly]="this.prices.monthly" > Monthly</span>
+        <span   [class.monthly]="this.prices.monthly"  (click)="changePrice()"> Monthly</span>
         <div class="changePrice" [class.month]="this.prices.isMonthly" [class.year]="!this.prices.isMonthly" (click)="changePrice()">
           <div class="ball"></div>
         </div>
-        <span [class.monthly]="!this.prices.monthly" >Yearly</span>
+        <span [class.monthly]="!this.prices.monthly"  (click)="changePrice()" >Yearly</span>
 
       </div>
 

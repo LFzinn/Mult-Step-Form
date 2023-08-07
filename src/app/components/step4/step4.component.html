@@ -1,7 +1,7 @@
 <div class="container">
   <div class="container_txt">
     <h1>Finishing up</h1>
-    <span>{{formData.value.name}}, Double-check everything looks OK before confirming.</span>
+    <span> <b>{{formData.value.name}}</b>, Double-check everything looks OK before confirming.</span>
   </div>
 
   <div class="summary_container">
@@ -10,14 +10,17 @@
       <li>
         <div class="summary_item">
             <div class="price_title">
-              {{formData.value.selectedOption}}
-              <span *ngIf="this.prices.isMonthly && formData.value.selectedOption">(Monthly)</span>
-              <span *ngIf="!this.prices.isMonthly && formData.value.selectedOption">(Yearly)</span>
+             <span class="plan_title">{{formData.value.selectedOption}}</span>
+              <span *ngIf="this.prices.isMonthly && formData.value.selectedOption"> (Monthly)</span>
+              <span *ngIf="!this.prices.isMonthly && formData.value.selectedOption"> (Yearly)</span>
             </div>
             <div class="price_value">
-              <span *ngIf="formData.value.selectedOption == 'Arcade'">{{prices.price1}}</span>
-              <span *ngIf="formData.value.selectedOption == 'Advanced'">{{prices.price2}}</span>
-              <span *ngIf="formData.value.selectedOption == 'Pro'">{{prices.price3}}</span>
+              <span *ngIf="formData.value.selectedOption == 'Arcade' && this.prices.isMonthly">${{prices.price1}}/mo</span>
+              <span *ngIf="formData.value.selectedOption == 'Arcade' && !this.prices.isMonthly">${{prices.price1}}/yr</span>
+              <span *ngIf="formData.value.selectedOption == 'Advanced' && this.prices.isMonthly">${{prices.price2}}/mo</span>
+              <span *ngIf="formData.value.selectedOption == 'Advanced' && !this.prices.isMonthly">${{prices.price2}}/yr</span>
+              <span *ngIf="formData.value.selectedOption == 'Pro' && this.prices.isMonthly">${{prices.price3}}/mo</span>
+              <span *ngIf="formData.value.selectedOption == 'Pro' && !this.prices.isMonthly">${{prices.price3}}/yr</span>
             </div>
         </div>
 
@@ -32,7 +35,8 @@
             {{formData.value.Option1}}
           </div>
           <div class="price_value">
-            <span *ngIf="formData.value.Option1" >{{prices.addOn1}}</span>
+            <span *ngIf="formData.value.Option1 && this.prices.isMonthly" >+${{prices.addOn1}}/mo</span>
+            <span *ngIf="formData.value.Option1 && !this.prices.isMonthly" >+${{prices.addOn1}}/yr</span>
           </div>
         </div>
         <div class="btn_summaryItem">
@@ -47,7 +51,8 @@
             {{formData.value.Option2}}
           </div>
           <div class="price_value">
-            <span *ngIf="formData.value.Option2">{{prices.addOn2}}</span>
+            <span *ngIf="formData.value.Option2 && this.prices.isMonthly">+${{prices.addOn2}}/mo</span>
+            <span *ngIf="formData.value.Option2 && !this.prices.isMonthly">+${{prices.addOn2}}/yr</span>
           </div>
         </div>
         <div class="btn_summaryItem">
@@ -62,7 +67,8 @@
             {{formData.value.Option3}}
           </div>
           <div class="price_value">
-            <span *ngIf="formData.value.Option3" >{{prices.addOn3}}</span>
+            <span *ngIf="formData.value.Option3 && this.prices.isMonthly">+${{prices.addOn3}}/mo</span>
+            <span *ngIf="formData.value.Option3 && !this.prices.isMonthly">+${{prices.addOn3}}/yr</span>
           </div>
         </div>
         <div class="btn_summaryItem">
