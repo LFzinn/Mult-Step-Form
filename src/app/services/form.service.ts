@@ -26,7 +26,9 @@ export class FormService {
   }
 
 
-
+  clear(){
+    this.formData.reset();
+  }
 
 
 }

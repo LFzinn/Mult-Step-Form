@@ -97,7 +97,7 @@
 
   <div class="btn_container">
     <button class="back_btn" (click)="back()" >Go Back</button>
-    <button class="btn" (click)="confirm()">Confirm</button>
+    <button class="btn" [disabled]="formData.invalid"  (click)="confirm()">Confirm</button>
   </div>
 
 
