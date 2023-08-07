@@ -17,6 +17,7 @@ label {
   background-color: var(--magnolia);
   border: 2px solid var(--cool-gray);
   border-radius: 1rem;
+  cursor: pointer;
 }
 
 

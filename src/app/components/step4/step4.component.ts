@@ -64,7 +64,10 @@ export class Step4Component implements OnInit {
   }
 
   confirm() {
-    this.router.navigate(['/step5'])
+    if(this.formData.valid) {
+      this.router.navigate(['/step5'])
+    }
+
   }
 
 

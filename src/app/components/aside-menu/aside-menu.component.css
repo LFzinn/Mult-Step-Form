@@ -19,6 +19,7 @@ border-radius: 1rem;
   align-items: center;
   gap: 2rem;
   color: var(--white);
+  cursor: pointer;
 }
 
 .menu_number {
