@@ -1,27 +1,51 @@
-# Form
+# Formulário reativo de Múltiplas Etapas com Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+## Tecnologias Utilizadas
 
-## Development server
+- Angular versão: 15.2.9
+- TypeScript versão: 4.9.5
+- CSS
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Serviços Usados
 
-## Code scaffolding
+- GitHub
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Características
+- **Formulario reativo**
+- **Intuitivo e dinamico**
+- **Alteração entre mensal e anual**
+- **100% responsivo**
+- **Fácil integração com BackEnd para enviar os dados ou aplicar validações personalizadas nos campos**
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Links
+- Repositório: https://github.com/LFzinn/Mult-Step-Form.<br>
+Em caso de encontrar algum bug ou inconsistência, por favor, entre em contato comigo através do [LinkedIn](https://www.linkedin.com/in/lfsilvaferreira/)
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Versão
 
-## Running end-to-end tests
+1.0.0.0
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Autor
+**Luiz Fernando Silva**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Projeto
+
+### Completo:
+
+![etapa um](./src/assets/public_assets/complet.gif)
+
+
+### Etapa 01:
+![etapa um](./src/assets/public_assets/stepOne.gif)
+### Etapa 02:
+![etapa dois](./src/assets/public_assets/stepTwo.gif)
+### Etapa 03:
+![etapa tres](./src/assets/public_assets/step3.gif)
+### Etapa 04:
+![etapa quatro](./src/assets/public_assets/4.gif)
+### Etapa 05:
+![etapa cinco](./src/assets/public_assets/thank.gif)
+
