@@ -15,15 +15,16 @@
 
         <div class="form_text">
           <label for="email">Email Address</label>
-          <span *ngIf="formData.get('email')?.touched && formData.get('email')?.invalid">Invalid email</span>
+          <span *ngIf="formData.get('email')?.touched && formData.get('email')?.invalid && formData.get('email')?.value !== ''">Invalid email</span>
         </div>
           <input id="input_field" type="text" formControlName="email" placeholder="What's your email address?">
 
           <div class="form_text">
             <label for="phone">Phone Number</label>
-            <span *ngIf="formData.get('phone')?.touched && formData.get('phone')?.invalid">This field is required</span>
+            <span id="template-error" *ngIf="formData.get('phone')?.dirty && formData.get('phone')?.untouched && formData.get('phone')?.invalid">(11) 99999-9999</span>
+            <span *ngIf="formData.get('phone')?.dirty && formData.get('phone')?.invalid && formData.get('phone')?.touched">Invalid Number</span>
           </div>
-          <input id="input_field" type="number" formControlName="phone" placeholder="What's your phone number?">
+          <input id="input_field" type="text" formControlName="phone" placeholder="What's your phone number?">
 
         <div class="btn_container1">
           <button class="btn" type="submit" [disabled]="formData.invalid">Next Step</button>

@@ -80,6 +80,8 @@ border-radius: 1rem;
     margin-bottom: 2rem;
   }
   .menu_item {
+    flex-direction: column;
+    text-align: center;
     gap: 0.5rem;
   }
   .menu_number {
@@ -99,9 +101,7 @@ border-radius: 1rem;
 
 
   @media (max-width: 670px) {
-    .menu_number {
-      display: none;
-    }
+
     #menu_txt  {
       text-align: center;
     }
@@ -115,9 +115,32 @@ border-radius: 1rem;
 
   @media (max-width: 290px) {
     aside {
+      border-radius: 0;
+      margin-bottom: 0;
+      border-radius: 2rem;
+    }
+    .menu_number {
+      width: 2rem;
+      height: 2rem;
+      font-size: 1.2rem;
+    }
+    .container_aside ul  {
+      gap: 0.5rem;
+      padding: 2rem;
+
+    }
+  }
+
+
+  @media (max-width: 200px){
+    aside {
       display: none;
     }
   }
+
+
+
+
 
 
 

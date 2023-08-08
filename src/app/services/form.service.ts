@@ -12,8 +12,8 @@ export class FormService {
   constructor(private formBuilder: FormBuilder) {
     this.formData = this.formBuilder.group({
       name:[null, Validators.required],
-      email:[null, [Validators.required, Validators.email]],
-      phone:[null, Validators.required],
+      email:[null, [Validators.required, Validators.pattern(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/)]],
+      phone:[null, [Validators.required, Validators.pattern(/^(\(\d{2}\) ?\d{4}-?\d{4}|\d{4}-?\d{4})$/)]],
       selectedOption:[null],
       Option1:[''],
       Option2:[''],

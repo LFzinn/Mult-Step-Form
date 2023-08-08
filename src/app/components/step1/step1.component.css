@@ -37,8 +37,9 @@
   color: var(--strawberry-red);
 }
 
-.errorMsg {
-  color: var(--strawberry-red);
+#template-error {
+  color: var(--purplish-blue);
+  font-size: 1.4rem;
 }
 
 
