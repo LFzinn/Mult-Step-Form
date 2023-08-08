@@ -31,7 +31,6 @@ export class Step3Component implements OnInit{
     if(this.formData.get('Option1')?.value === !this.formData.get('Option1')?.value) {
       this.formData.get('Option1')?.setValue(true);
     }
-    console.log(this.formData.value)
   }
 
 
